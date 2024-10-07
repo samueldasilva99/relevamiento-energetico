@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#tabla-equipos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tabla-equipos th, #tabla-equipos td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#progress-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+#progress {
+    height: 100%;
+    width: 0;
+    background-color: green;
+    border-radius: 15px;
+    transition: width 0.5s;
+}
+
+#grafico-torta {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+#consumo-anual {
+    text-align: center; /* Centra el texto */
+    font-size: 1.2em; /* Ajusta el tamaño de la fuente si lo deseas */
+    margin-top: 20px; /* Espacio superior para separación */
+}
+
+.contenedor-consumo {
+    text-align: center; /* Centra todo el contenido dentro de este contenedor */
+    margin: 20px auto; /* Para mantener un margen superior e inferior */
+}
+
+#grafico-torta {
+    width: 300px;
+    height: 300px;
+    margin: auto;  /* Centra el gráfico */
+}

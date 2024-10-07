@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relevamiento Energético</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Relevamiento Energético</h1>
+
+        <!-- Sección de Iluminación -->
+        <section id="iluminacion">
+            <h2>Relevamiento de Iluminación</h2>
+            <div class="form-group">
+                <label for="equipo-iluminacion">Equipo de Iluminación</label>
+                <select id="equipo-iluminacion"></select>
+
+                <label for="cantidad-iluminacion">Cantidad</label>
+                <input type="number" id="cantidad-iluminacion" min="1">
+
+                <label for="horas-dia-iluminacion">Horas por Día</label>
+                <input type="number" id="horas-dia-iluminacion" min="1">
+
+                <label for="dias-semana-iluminacion">Días por Semana</label>
+                <input type="number" id="dias-semana-iluminacion" min="1">
+
+                <button id="cargar-iluminacion">Cargar Iluminación</button>
+            </div>
+        </section>
+
+        <!-- Sección de Equipos Eléctricos -->
+        <section id="equipos-electricos">
+            <h2>Relevamiento de Equipos Eléctricos</h2>
+            <div class="form-group">
+                <label for="equipo-electricos">Equipo Eléctrico</label>
+                <select id="equipo-electricos"></select>
+
+                <label for="cantidad-electricos">Cantidad</label>
+                <input type="number" id="cantidad-electricos" min="1">
+
+                <label for="horas-dia-electricos">Horas por Día</label>
+                <input type="number" id="horas-dia-electricos" min="1">
+
+                <label for="dias-semana-electricos">Días por Semana</label>
+                <input type="number" id="dias-semana-electricos" min="1">
+
+                <button id="cargar-electricos">Cargar Equipos Eléctricos</button>
+            </div>
+        </section>
+
+        <!-- Sección de Climatización -->
+        <section id="climatizacion">
+            <h2>Relevamiento de Climatización</h2>
+            <div class="form-group">
+                <label for="equipo-climatizacion">Equipo de Climatización</label>
+                <select id="equipo-climatizacion"></select>
+
+                <label for="potencia-climatizacion">Potencia (kW)</label>
+                <input type="number" id="potencia-climatizacion" min="1">
+
+                <label for="cantidad-climatizacion">Cantidad</label>
+                <input type="number" id="cantidad-climatizacion" min="1">
+
+                <label for="horas-dia-climatizacion">Horas por Día</label>
+                <input type="number" id="horas-dia-climatizacion" min="1">
+
+                <label for="dias-semana-climatizacion">Días por Semana</label>
+                <input type="number" id="dias-semana-climatizacion" min="1">
+
+                <button id="cargar-climatizacion">Cargar Climatización</button>
+            </div>
+        </section>
+
+        <!-- Sección de Motores -->
+        <section id="motores">
+            <h2>Relevamiento de Motores</h2>
+            <div class="form-group">
+                <label for="equipo-motores">Motor</label>
+                <select id="equipo-motores"></select>
+
+                <label for="potencia-motores">Potencia (kW)</label>
+                <input type="number" id="potencia-motores" min="1">
+
+                <label for="cantidad-motores">Cantidad</label>
+                <input type="number" id="cantidad-motores" min="1">
+
+                <label for="horas-dia-motores">Horas por Día</label>
+                <input type="number" id="horas-dia-motores" min="1">
+
+                <label for="dias-semana-motores">Días por Semana</label>
+                <input type="number" id="dias-semana-motores" min="1">
+
+                <button id="cargar-motores">Cargar Motores</button>
+            </div>
+        </section>
+
+        <!-- Tabla de Resultados -->
+        <section id="resultados">
+            <section>
+                <h2>Consumo Total Anual</h2>
+                <div class="contenedor-consumo">
+                    <span id="consumo-anual">0</span> kWh
+                </div>
+            </section>
+
+            <table id="tabla-equipos">
+                <thead>
+                    <tr>
+                        <th>Equipo</th>
+                        <th>Cantidad</th>
+                        <th>Horas por Día</th>
+                        <th>Días por Semana</th>
+                        <th>Consumo Mensual (kWh)</th>
+                        <th>Consumo Anual (kWh)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las filas serán generadas dinámicamente -->
+                </tbody>
+            </table>
+
+            <canvas id="grafico-torta" width="300" height="300"></canvas>
+        </section>
+
+        <section>
+            <h2>Recomendaciones generales</h2>
+            <p>Climatizacion</p>
+            <p></p>
+            <ul style="text-align: justify;">
+                <li>Mantener las temperaturas de confort recomendadas en invierno y verano para evitar gastos innecesarios de energía.
+                    Temperatura mínima en verano: 24° C
+                    Temperatura máxima en invierno: 20° C
+                    </li>
+                <li>Evitar el uso de equipos funcionando cuando no hay demanda de frío/calor en las áreas a acondicionar.
+                </li>
+                <li>Regular manualmente los horarios de encendido/apagado, y evitar encender todos los equipos en el mismo momento.
+                </li>
+                <li>Mantener puertas y ventanas cerradas en espacios climatizados para evitar pérdidas de temperatura.
+                </li>
+                <li>Mantener las puertas y ventanas abiertas cuando no se estén climatizando los espacios, de forma de facilitar la renovación del aire interior y el mejoramiento de la calidad del mismo, así como una mejora en las condiciones climáticas interiores.
+                </li>
+            </ul>
+            <p>Equipos Electricos</p>
+            <p></p>
+            <ul style="text-align: justify;">
+                <li>Computadores
+                    <p></p>Reducir el brillo en las pantallas, utilizar salvapantallas de color oscuro.
+                    <p></p>Apagar el monitor al retirarse de la computadora por períodos menores a 10 minutos. Si la ausencia es mayor a 30 minutos, apagar todo el equipo.
+                    <p></p>Disminuir el stand by de los equipos.
+                    <p></p>Programar el suspendido automático. 
+                </li>
+                <p></p>
+                <li>Heladeras
+                    <p></p>Mantenerlas separadas de la pared y alejadas de fuentes de calor, mantener limpia y ventilada la parte posterior.
+                    <p></p>Descongelar los freezers cada seis meses.
+                    <p></p>No guardar alimentos calientes. 
+                </li>
+                <p></p>
+                <li>Equipos generales
+                    <p></p>Apagar/encender los dispensers de agua por medio de la perilla posterior.
+                    <p></p>Apagar y desenchufar los aparatos eléctricos y electrónicos que no se estén usando.                     
+                </li>
+            </ul>
+            <p>Iluminación</p>
+            <p></p>
+            <ul style="text-align: justify;">
+                <li>Aprovechar la luz natural siempre que sea posible.</li>
+                <li>Apagar las luces cuando no se estén utilizando.</li>
+                <li>Utilizar iluminación dirigida siempre que sea posible, en vez de iluminar todo el espacio.                    
+                </li>
+            </ul>
+            <p>Tableros Electricos</p>
+            <p></p>
+            <ul style="text-align: justify;">
+                <li>Realizar una verificación minuciosa de todos los tableros por medio de cámaras termográficas y pinzas amperométricas.</li>
+                <li>Realizar una verificación visual periódica de los tableros eléctricos corroborando los dispositivos de maniobra y de protección.</li>
+                <li>Aspirar el polvo y otros signos de suciedad.</li>
+                <li>Monitorear la distribución de cargas en las fases de los tableros eléctricos y de ser necesario equilibrar cargas; distribuyendo de manera uniforme la carga eléctrica entre las fases, reubicando las cargas y reajustando la conexión de los equipos.
+                </li>
+            </ul>
+            <p></p>
+            <p>PARA UN MEJOR RELEVAMIENTO MÁS EXACTO PUEDEN UTILIZAR LA SIGUIENTE HERRAMIENTA <a href="https://drive.google.com/uc?export=download&id=1XL5c-PgSs05iwH2NKeedtB9bdMU0P3pb" download>PLANILLA DE RELEVAMIENTO</a>.</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
